@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SpotiService } from 'src/app/services/spoti.service';
 
 @Component({
@@ -9,13 +10,18 @@ import { SpotiService } from 'src/app/services/spoti.service';
 export class HomeComponent implements OnInit {
   releases: any[] = []
 
-  constructor(private spotiSvc: SpotiService) { }
+  constructor(private spotiSvc: SpotiService, private router: Router) { }
 
   ngOnInit(): void {
     this.spotiSvc.getNewReleases().subscribe(res => {
       console.log(res);
       this.releases = res
     })
+  }
+
+  viewAlbum(id:string){
+    console.log(id);
+    this.router.navigate(["/album", id])
   }
 
 }

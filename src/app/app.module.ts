@@ -8,6 +8,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { SearchimgPipe } from './pipes/searchimg.pipe';
+import { ArtistComponent } from './components/artist/artist.component';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { WidgetPipe } from './pipes/widget.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { SearchimgPipe } from './pipes/searchimg.pipe';
     NavbarComponent,
     HomeComponent,
     SearchComponent,
-    SearchimgPipe
+    SearchimgPipe,
+    ArtistComponent,
+    AlbumsComponent,
+    WidgetPipe
   ],
   imports: [
     BrowserModule,

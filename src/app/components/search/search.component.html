@@ -6,10 +6,15 @@
   (keyup)="onSearch(searchForm.value)"
 />
 
-<div class="row row-cols-1 row-cols-md-4 g-4 mt-5">
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
   <div class="col" *ngFor="let result of resultsSearch">
     <div class="card">
-      <img [src]="result.images | searchimg" class="card-img-top" alt="..." />
+      <img
+        (click)="viewArtist(result.id)"
+        [src]="result.images | searchimg"
+        class="card-img-top"
+        alt="..."
+      />
       <div class="card-body">
         <h5 class="card-title">{{ result.name }}</h5>
       </div>

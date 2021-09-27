@@ -17,7 +17,7 @@ export class SpotiService {
     const url = `${this.baseUrl}${query}`
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQA-pmI5NinTBVRPQMPFTGgaXDQ8XXweJfybBZ7OFl6ur98i9d6yG9Sa06Nlhqkr19POcja_pO_a7zeGC-M'
+      'Authorization': 'Bearer BQBSOuf0rF3VjSsfLpvRh5bgCNcD0ssWpSXWL1XKcDjZ328vx8TUfWnsbZ7CrtvqSdbZTV_yOkfy27fa7wU'
     })
 
     return this.http.get(url, { headers })
@@ -29,7 +29,7 @@ export class SpotiService {
     )
   }
 
-  searchArtist(search: string) {
+  searchArtists(search: string) {
     return this.getQuery(`search?query=${search}&type=artist&offset=0&limit=20`).pipe(
       map((res: any) => {
         return res.artists.items
@@ -38,4 +38,23 @@ export class SpotiService {
     )
   }
 
+  getArtistById(id: string) {
+    return this.getQuery(`artists/${id}`)
+  }
+
+
+  getAlbumById(id: string) {
+    return this.getQuery(`albums/${id}`)
+  }
+
+  getTopTracks(id: string) {
+    return this.getQuery(`artists/${id}/top-tracks?market=es`).pipe(
+      map((res: any) => {
+        return res.tracks
+      })
+    )
+  }
+
 }
+
+
