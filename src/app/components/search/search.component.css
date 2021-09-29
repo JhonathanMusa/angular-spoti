@@ -1,3 +1,11 @@
 .card img{
     cursor: pointer;
 }
+
+.search-input{
+    background-color: #000d09;
+    color: #eee !important;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none !important;
+}

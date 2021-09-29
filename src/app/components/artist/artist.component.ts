@@ -15,7 +15,7 @@ export class ArtistComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private spoti: SpotiService) {
     this.isLoading = true;
-  } 
+  }
 
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class ArtistComponent implements OnInit {
       this.artistId = res.id;
       this.isLoading = false;
     })
-    
+
     this.getArtist()
     this.topTracks()
   }

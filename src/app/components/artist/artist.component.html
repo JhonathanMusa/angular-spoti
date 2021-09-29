@@ -22,9 +22,10 @@
 
 <a routerLink="/search" class="btn btn-warning mb-4"> Back </a>
 
-<table class="table">
+<table class="artist-tab">
   <thead>
     <tr>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -44,6 +45,7 @@
           allow="encrypted-media"
         ></iframe>
       </td>
+      <td>Popularity - {{ tracks.popularity }}</td>
     </tr>
   </tbody>
 </table>
