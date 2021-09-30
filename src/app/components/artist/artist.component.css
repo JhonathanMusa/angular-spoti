@@ -15,6 +15,18 @@
   height: 300px;
 }
 
+.artist-tab tr:hover {
+  background: rgb(43, 43, 43);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.artist-tab td:active {
+  background: rgb(43, 43, 43);
+  color: #fff;
+  border-radius: 10px;
+}
+
 h1 {
   text-align: center;
   font-size: 3rem;
@@ -34,14 +46,29 @@ li {
 }
 
 .table {
-  color: #eee;
+  color: rgb(65, 64, 64);
 }
 
 .artist-tab {
-  color: #eee;
+  color: rgb(128, 128, 128);
   margin: auto;
+  position: relative;
 }
 
 .artist-tab td {
-  padding: 0 50px 50px 50px;
+  padding: 0 50px;
+}
+
+.album_img{
+  cursor: pointer;
+}
+
+.isLoadingSpinner {
+  color: #fff;
+  text-align: center;
+}
+
+.widget {
+  padding: 0;
+  margin: 0;
 }

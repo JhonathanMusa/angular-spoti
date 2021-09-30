@@ -17,7 +17,7 @@ export class SpotiService {
     const url = `${this.baseUrl}${query}`
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQA-61hrIBJu8KpBbz8liQd0NYCG6zW5UM3EM16YKMabChiwJ5IhxigiF9mQQC6EnDfyrNMRD_CaIBnq5Yc'
+      'Authorization': 'Bearer BQCW-ZK6Cqa484VO4qfDk_O4AiZSaJHdf8KjWxAFozKfpvHnf2LX04zcfn984gx9G1v-1lU1cB2thgfeufc'
     })
 
     return this.http.get(url, { headers })

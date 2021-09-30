@@ -9,3 +9,8 @@
     border-bottom: 1px solid;
     outline: none !important;
 }
+
+.isLoadingSpinner{
+    text-align: center;
+    margin-top: 20px;
+}

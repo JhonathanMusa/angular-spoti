@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SpotiService } from 'src/app/services/spoti.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class ArtistComponent implements OnInit {
   artistId!: string;
   isLoading = false
 
-  constructor(private activatedRoute: ActivatedRoute, private spoti: SpotiService) {
+  constructor(private activatedRoute: ActivatedRoute, private spoti: SpotiService, private router: Router) {
     this.isLoading = true;
   }
 
@@ -21,11 +21,11 @@ export class ArtistComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(res => {
       this.artistId = res.id;
-      this.isLoading = false;
     })
 
     this.getArtist()
     this.topTracks()
+    this.isLoading = false
   }
 
   getArtist() {
@@ -41,6 +41,10 @@ export class ArtistComponent implements OnInit {
       this.artistTopTracks = res
     });
 
+  }
+
+  viewAlbum(id: string) {
+    this.router.navigate(["/album", id])
   }
 
 
